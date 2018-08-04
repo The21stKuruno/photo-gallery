@@ -113,7 +113,8 @@ button {
 
 body {
   background: #F5F6FA;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
 }
 
 .container {
@@ -164,28 +165,110 @@ form.grid-item-3 button {
 .photo-grid {
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   justify-content: center;
 }
 
 .photo-grid a {
   background: #fff;
-  padding: 20px;
+  padding: 30px 20px 20px 20px;
+  border-radius: 2px;
+  box-shadow: 0 1px 5px rgba(104, 104, 104, 0.3);
 }
 
 .photo-grid img {
-  border-radius: 2px;
   margin-bottom: 15px;
   width: 100%;
   height: 200px;
 }
 
+.photo-grid h3 {
+  padding: 10px 0;
+  font-size: 1.2rem;
+}
+
 .photo-grid figcaption {
   color: #848C96;
   font-size: 1.1rem;
-  text-align: center;
 }
 
+/* Form Upload */
+section.upload-photo {
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 30px 0;
+  width: 100%;
+  background: #fff;
+}
+
+section.upload-photo h3 {
+  color: #F15B66;
+  font-size: 2rem;
+  text-align: center;
+  padding: 20px;
+}
+
+section.upload-photo form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+section.upload-photo input, textarea, section.upload-photo button {
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 8px;
+  margin-bottom: 10px;
+  display: block;
+  width: 100%;
+}
+
+section.upload-photo input {
+  font-family: 'Roboto Condensed', sans-serif;
+  height: 33px;
+}
+
+label {
+  font-family: 'Roboto Condensed', sans-serif;
+  height: 33px;
+  border: 1px solid #F15B66;
+  font-size: 1rem;
+  padding: 0 8px;
+  color: #7A7A85;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 8px;
+  margin-bottom: 10px;
+  display: block;
+  width: 100%;
+}
+
+label i {
+  padding: 0 10px 0 0;
+}
+
+#img-des {
+  display: none;
+}
+
+section.upload-photo input, textarea {
+  border: 1px solid #F15B66;
+  font-size: 1rem;
+}
+
+textarea {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+section.upload-photo button {
+  margin-top: 20px;
+  border: 0;
+  background: #F15B66;
+  color: #fff;
+  height: 40px;
+  padding: 0 20px;
+}
+
+/* Footer */
 footer {
   background: #fff;
   width: 100%;
@@ -215,9 +298,12 @@ footer p {
     width: 100%;
     height: auto;
   }
+  section.upload-photo form {
+    width: 80%;
+  }
 }
 
-@media(max-width: 700px)  {
+@media(max-width: 500px)  {
   .header-inner {
     grid-template-columns: 1fr;
     height: auto;
